@@ -1,7 +1,10 @@
 # My 9‑Key Macropad  
 This is my submission for a custom 9‑key macropad built using the XIAO RP2040, Cherry‑style switches, and a fully custom PCB + case.
 
-<img src= "Images/Assembled_CASE.png" width="45%"> <img src="Images/CASE+PCB.png" width="45%">
+<p align="center">
+  <img src="Images/Assembled_CASE.png" width="45%" />
+  <img src="Images/CASE+PCB.png" width="45%" />
+</p>
 
 ---
 
