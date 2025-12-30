@@ -1,4 +1,4 @@
-# Sarvesh’s 9‑Key Macropad  
+# My 9‑Key Macropad  
 Done your hackpad? Congrats! This is my submission for a custom 9‑key macropad built using the XIAO RP2040, Cherry‑style switches, and a fully custom PCB + case.
 
 ![Hackpad Overview](INSERT_YOUR_OVERVIEW_IMAGE_LINK)
@@ -44,9 +44,8 @@ Even with the challenges, I’m proud of how polished the final macropad turned 
 
 ---
 
-### Schematic    PCB    Case
 Schematic | PCB | Case
 :-------------------------:|:-------------------------:|:-------------------------:
-![schematic](https://github.com/user-attachments/assets/htwQios7TnqkuKQpQAkb6.png) | ![pcb](https://github.com/user-attachments/assets/EZPe3mUzWAVBsYtoecF6E.png) | ![case](https://github.com/user-attachments/assets/YFSC6EFcJ26fHADjNtVpH.png)
+![schematic](Images/Schematic.png) | ![pcb](Images/PCB.png) | ![case](Images/CASE.png)
 
 ---
