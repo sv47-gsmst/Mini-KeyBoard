@@ -4,12 +4,35 @@ from kmk.kmk_keyboard import KMKKeyboard
 from kmk.scanners.keypad import KeysScanner
 from kmk.keys import KC
 from kmk.modules.macros import Macros, Press, Release, Tap
+from kmk.modules.tapdance import TapDance  # <-- already added for K3
 
 keyboard = KMKKeyboard()
 
 # Enable macros
 macros = Macros()
 keyboard.modules.append(macros)
+
+# Enable tapdance  <-- already present
+tapdance = TapDance()
+keyboard.modules.append(tapdance)
+
+# Tapdance definition for K3  <-- already present
+TD_WIN_LOCK = KC.TD(
+    KC.LGUI,  # tap → Windows key
+    KC.MACRO(Press(KC.LGUI), Tap(KC.L), Release(KC.LGUI)),  # hold → Win + L
+)
+
+# Tapdance definition for K7  <-- NEW
+TD_SCREENSHOT = KC.TD(
+    KC.MACRO(Tap(KC.PSCR)),  # tap → Full screenshot (PrintScreen)
+    KC.MACRO(                 # hold → Win + Shift + S
+        Press(KC.LGUI),
+        Press(KC.LSHIFT),
+        Tap(KC.S),
+        Release(KC.LSHIFT),
+        Release(KC.LGUI),
+    ),
+)
 
 # Your exact pin wiring
 PINS = [
@@ -37,8 +60,8 @@ keyboard.keymap = [
         # K2 → Alt + Tab
         KC.MACRO(Press(KC.LALT), Tap(KC.TAB), Release(KC.LALT)),
 
-        # K3 → Windows Key
-        KC.LGUI,
+        # K3 → Tap = Win, Hold = Win+L
+        TD_WIN_LOCK,
 
         # K4 → Previous Track
         KC.MPRV,
@@ -49,8 +72,8 @@ keyboard.keymap = [
         # K6 → Next Track
         KC.MNXT,
 
-        # K7 → Airplane Mode
-        KC.AIRPLANE,
+        # K7 → Tap = Full Screenshot, Hold = Snip Tool  <-- ONLY CHANGE HERE
+        TD_SCREENSHOT,
 
         # K8 → Volume Down
         KC.VOLD,
